@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     email:{type:String,required:true,unique:true},
     phone:{type:Number,required:true},
     password:{type:String,required:true},
-    profile_pic:{type:String,default:"http://localhost/images/"},
+    profile_pic:{type:String,default:"https://res.cloudinary.com/dtuatqheg/image/upload/v1736867796/oofp1azpdbc1ybvd35el.png"},
     groups:[{type:Schema.Types.ObjectId,ref:"groups"}],
     profile_bio:{type:String,default:"Hi there, I am a proud chatspot user"},
     is_user:{type:Boolean,default:true},
