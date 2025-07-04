@@ -8,7 +8,7 @@ const server = http.createServer(app);
 //setup the socket
 const io = new Server(server,{
     cors:{
-        origin:['http://localhost:5173'],
+        origin:['https://chatspot-chat.onrender.com'],
         methods:["POST","GET","PUT","DELETE"],
         credentials:true
     }

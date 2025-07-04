@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser())
 //enable cross origin reqs
 app.use(cors({
-origin:['http://localhost:5173'],
+origin:['https://chatspot-chat.onrender.com'],
 methods:["POST","GET","PUT","DELETE"],
 credentials:true
 }));
