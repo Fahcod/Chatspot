@@ -9,6 +9,7 @@ import messageRouter from "./routes/message.route.js";
 import groupRouter from "./routes/group.route.js";
 import storyRouter from "./routes/story.route.js";
 import notificationRouter from "./routes/notify.route.js";
+import { CLIENT_URL } from "./lib/url.js";
 
 const PORT = process.env.PORT;
 
@@ -18,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser())
 //enable cross origin reqs
 app.use(cors({
-origin:['https://chatspot-chat.onrender.com'],
+origin:CLIENT_URL,
 methods:["POST","GET","PUT","DELETE"],
 credentials:true
 }));

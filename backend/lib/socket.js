@@ -2,13 +2,14 @@ import http from "http";
 import express from "express";
 import { Server } from "socket.io";
 import { updateConnectionStatus } from "../controllers/user.controller.js";
+import { CLIENT_URL } from "./url.js";
 
 const app = express();
 const server = http.createServer(app);
 //setup the socket
 const io = new Server(server,{
     cors:{
-        origin:['https://chatspot-chat.onrender.com'],
+        origin:CLIENT_URL,
         methods:["POST","GET","PUT","DELETE"],
         credentials:true
     }
