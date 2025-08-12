@@ -33,7 +33,7 @@ const Sidebar = () => {
   }
 
   return (
-    <div className={`fixed flex ${isShow?'translate-x-100 sm:translate-x-0 ':'translate-x-0'} duration-500 bg-[#f8f9fb] h-screen w-[100%] z-[200] sm:z-0 sm:w-[30%]`}>
+    <div className={`overflow-y-auto [&::-webkit-scrollbar]:w-0 fixed flex ${isShow?'translate-x-100 sm:translate-x-0 ':'translate-x-0'} duration-500 bg-[#f8f9fb] h-screen w-[100%] z-[200] sm:z-0 sm:w-[30%]`}>
     {/* the left container */}
     <div className="w-0 sm:w-[15%] pt-6 pb-16 flex flex-col items-center justify-between h-screen bg-[#f8f9fb]">
     {/* the icons container */}

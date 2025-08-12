@@ -1,4 +1,4 @@
-import {BiMenu, BiPlus, BiSearch} from "react-icons/bi";
+import {BiBell, BiDotsVerticalRounded, BiMenu, BiPlus, BiSearch} from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowCreateGroup } from "../../slices/modalSlice";
 import { setActiveChat } from "../../slices/chatSlice";
@@ -27,8 +27,17 @@ const Groups = () => {
 
   return (
     <div className="w-full h-full relative">
+    {/* the mobile | responsive header */}
+    <div className="w-full py-4 md:hidden flex items-center justify-between">
+        <h1 className="font-[rubik-bold] text-[#773ee0] italic text-xl">Chatspot</h1>
+        {/* the right container */}
+        <div className="flex items-center gap-3">
+        <BiBell className="w-6.5 h-6.5"/>
+        <BiDotsVerticalRounded className="w-7 h-7"/>
+        </div>
+        </div>
     {/* the header */}
-    <div className="w-full flex items-center justify-between py-4">
+    <div className="w-full hidden md:flex items-center justify-between py-4">
     <h2 className="font-[rubik-bold] text-xl">Groups</h2>
     <BiMenu className="w-8 h-8"/>
     </div>
